@@ -28,7 +28,7 @@ This app leverages **local storage** for persistence and **Tailwind CSS** for re
 
 ## Live Demo
 
-You can try the live demo of this project [here](https://praveen-directory-app-reactjs.netlify.app/)
+You can try the live demo of this project [here](https://directory-app-praveen.netlify.app/)
 
 ## Technologies Used
 
