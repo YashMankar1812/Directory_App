@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Row, Col } from "reactstrap";
 
 const AddPersonForm = ({ onSave }) => {
   const [newPerson, setNewPerson] = useState({
@@ -51,78 +52,82 @@ const AddPersonForm = ({ onSave }) => {
   };
 
   return (
-    <>
-      <div className="flex gap-3 w-full">
-        <div className="flex flex-col w-full ">
-          <input
-            type="text"
-            required
-            placeholder="Name"
-            className="border p-2 mr-2 rounded-md w-full"
-            value={newPerson.name}
-            onChange={(e) =>
-              setNewPerson({ ...newPerson, name: e.target.value })
-            }
-          />
-        </div>
+    <div className="p-4 flex justify-center">
+      <div>
+        <Row className=" md:gap-0">
+          <Col xs="12" md="6" lg="3" className="mb-3">
+            <input
+              type="text"
+              required
+              placeholder="Name"
+              className="border p-2 rounded-md w-full"
+              value={newPerson.name}
+              onChange={(e) =>
+                setNewPerson({ ...newPerson, name: e.target.value })
+              }
+            />
+            {errors.name && <p className="text-red-500 mt-1">{errors.name}</p>}
+          </Col>
 
-        <div className="flex flex-col w-full ">
-          <input
-            type="date"
-            required
-            placeholder="DOB"
-            className="border p-2 mr-2 rounded-md w-full"
-            value={newPerson.dob}
-            onChange={(e) =>
-              setNewPerson({ ...newPerson, dob: e.target.value })
-            }
-          />
-        </div>
+          <Col xs="12" md="6" lg="3" className="mb-3">
+            <input
+              type="date"
+              required
+              placeholder="DOB"
+              className="border p-2 rounded-md w-full"
+              value={newPerson.dob}
+              onChange={(e) =>
+                setNewPerson({ ...newPerson, dob: e.target.value })
+              }
+            />
+            {errors.dob && <p className="text-red-500 mt-1">{errors.dob}</p>}
+          </Col>
 
-        <div className="flex flex-col w-full ">
-          <input
-            type="text"
-            required
-            placeholder="Aadhar Number"
-            className="border p-2 mr-2 rounded-md w-full"
-            value={newPerson.aadhar}
-            onChange={(e) =>
-              setNewPerson({ ...newPerson, aadhar: e.target.value })
-            }
-          />
-        </div>
+          <Col xs="12" md="6" lg="3" className="mb-3">
+            <input
+              type="text"
+              required
+              placeholder="Aadhar Number"
+              className="border p-2 rounded-md w-full"
+              value={newPerson.aadhar}
+              onChange={(e) =>
+                setNewPerson({ ...newPerson, aadhar: e.target.value })
+              }
+            />
+            {errors.aadhar && (
+              <p className="text-red-500 mt-1">{errors.aadhar}</p>
+            )}
+          </Col>
 
-        <div className="flex flex-col w-full ">
-          <input
-            type="text"
-            required
-            placeholder="Mobile Number"
-            className="border p-2 mr-2 rounded-md w-full"
-            value={newPerson.mobile}
-            onChange={(e) =>
-              setNewPerson({ ...newPerson, mobile: e.target.value })
-            }
-          />
-        </div>
+          <Col xs="12" md="6" lg="3" className="mb-3">
+            <input
+              type="text"
+              required
+              placeholder="Mobile Number"
+              className="border p-2 rounded-md w-full"
+              value={newPerson.mobile}
+              onChange={(e) =>
+                setNewPerson({ ...newPerson, mobile: e.target.value })
+              }
+            />
+            {errors.mobile && (
+              <p className="text-red-500 mt-1">{errors.mobile}</p>
+            )}
+          </Col>
+        </Row>
 
-        <button
-          className="bg-green-500 hover:bg-green-600 text-lg text-white px-4 py-1 rounded-md w-full"
-          onClick={handleSave}
-        >
-          Save
-        </button>
+        <Row className="justify-center mt-2">
+          <Col xs="12" md="4" className="text-center">
+            <button
+              className="bg-green-500 hover:bg-green-600 text-lg text-white px-6 py-2 rounded-md w-full"
+              onClick={handleSave}
+            >
+              Save
+            </button>
+          </Col>
+        </Row>
       </div>
-      <div className="text-center">
-        {(errors.name && <p className="text-red-500 mb-2">{errors.name}</p>) ||
-          (errors.dob && <p className="text-red-500 mb-2">{errors.dob}</p>) ||
-          (errors.aadhar && (
-            <p className="text-red-500 mb-2">{errors.aadhar}</p>
-          )) ||
-          (errors.mobile && (
-            <p className="text-red-500 mb-2">{errors.mobile}</p>
-          ))}
-      </div>
-    </>
+    </div>
   );
 };
 

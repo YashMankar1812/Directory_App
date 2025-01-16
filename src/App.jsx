@@ -5,6 +5,7 @@ import Tabs from "./components/Tabs";
 import AddPersonForm from "./components/AddPersonForm";
 import PersonList from "./components/PersonList";
 import RetrievePersonForm from "./components/RetrievePersonForm";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [activeTab, setActiveTab] = useState("addPerson");
