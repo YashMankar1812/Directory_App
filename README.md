@@ -1,4 +1,4 @@
-# Person Management App / Directory App
+# Aadhar Information Management App / Directory App
 
 This **Person Management Application** is a React.js-based project that allows users to manage personal details such as Name, Date of Birth, Aadhar Number, and Mobile Number. The application offers two primary features:
 
@@ -28,7 +28,7 @@ This app leverages **local storage** for persistence and **Tailwind CSS** for re
 
 ## Live Demo
 
-You can try the live demo of this project [here](https://directory-app-praveen.netlify.app/)
+You can try the live demo of this project [here](https://directory-3v8fazcqs-yashmankar1812s-projects.vercel.app/)
 
 ## Technologies Used
 
